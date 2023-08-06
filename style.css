@@ -1,0 +1,49 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2023/01/16/18/26/stalks-7723029_640.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.images{
+    text-align: center;
+}
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1200px;
+    margin: 0px auto;
+    flex-wrap: wrap;
+}
+.box{
+    width: 20%;
+    border: 3px solid wheat;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 50px 10px;
+    background-color: rgba(245, 222, 179, 0.659);
+    color: rgb(255, 166, 0);
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+.footer {
+    
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+
+
+
