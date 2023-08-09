@@ -1,0 +1,8 @@
+.boxes{
+    border: 33px solid blue;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+   box-sizing: border-box;
+}
