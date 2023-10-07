@@ -11,8 +11,9 @@
 }
 
 .container {
+    background-color: black;
     width: 100vw;
-    height: 100vh;  
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(24, 1fr);
@@ -24,7 +25,7 @@ header {
 }
 
 aside {
-    background-color: blueviolet;
+    background-color: black;
     grid-area: 1/1/25/5;
     font-size: 2rem;
     color: white;
@@ -47,6 +48,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 11fr;
+    border: 10px solid rgb(var(--emerald1));
+    margin: 0 1rem 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
 }
 
 .projects {
@@ -65,28 +70,23 @@ main {
 }
 
 .projects::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
     border-radius: 10px;
 }
 
 .projects::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .projects::-webkit-scrollbar-thumb:hover {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px #0ea5e9; 
-}
-
-.others {
-    background-color: rgb(var(--emerald1));
-    grid-area: 2/1/3/2;
+    -webkit-box-shadow: inset 0 0 6px #0ea5e9;
 }
 
 .card {
     border: 2px white solid;
-    height: 25rem;
+    height: 23rem;
 }
 
 .yourP {
@@ -107,4 +107,37 @@ main {
     color: white;
     background-color: rgb(var(--emerald1));
     grid-area: 1/1/2/2;
+    
+}
+
+.others {
+    background-color: rgb(var(--emerald1));
+    grid-area: 2/1/3/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.aCard {
+    border: 2px solid white;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.trend {
+    overflow:hidden;
+}
+
+.tCard {
+    border: 2px solid white;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.tP {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 8px;
 }
