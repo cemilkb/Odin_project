@@ -7,15 +7,13 @@
 :root {
     font-size: 10px;
     --emerald1: 94, 234, 212;
-
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 .container {
-    background-color: black;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -24,42 +22,117 @@ a{
 }
 
 header {
-    background-color: black;
-    grid-area: 1/5/6/25;
+    background-color: white;
+    grid-area: 1/4/5/25;
+    min-height: 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.headerGrid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: 4fr 7fr;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color:  #219C90;
+    padding-left: 40px;
+}
+
+.search>input {
+    width: 50vw;
+    border-radius: 3rem;
+    padding: 3px 5px;
+    font-size: 1.5rem;
+}
+
+.who {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    background-color: #219C90;
+}
+
+.otherH {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+.buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.otherH>img {
+    width: 4rem;
+    background-color: #E9B824;
+    border-radius: 50%;
+}
+
+.whoSecond {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 40px;
+}
+
+.whoSecond>img {
+    width: 6rem;
+    height: 6rem;
+    background-color: #E9B824;
+    border-radius: 50%;
+}
+
+
+button {
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 4px 0;
+    border-radius: 50px;
+    border: none;
+    background-color: #EE9322;
+    color: white;
 }
 
 aside {
-    background-color: black;
-    grid-area: 1/1/25/5;
+    background-color:  #219C90;
+    grid-area: 1/1/25/4;
     font-size: 2rem;
-    color: white;
+    color: black;
     display: grid;
     grid-template-rows: repeat(12, 5%);
+    min-width: 170px;
+    font-family: 'Raleway', sans-serif;
 }
 
 aside>div {
     display: flex;
     align-items: center;
     margin: 2rem 0 0 2rem;
-}
-
-aside>div:first-child {
-    align-items: normal;
+    font-weight: bold;
 }
 
 main {
-    grid-area: 6/5/25/25;
+    grid-area: 5/4/25/25;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 11fr;
-    border: 10px solid rgb(var(--emerald1));
-    margin: 0 1rem 1rem 0;
-    border-radius: 10px;
-    box-shadow: 0 0 5px white;
+    box-shadow: inset 0 5px white;
 }
 
 .projects {
-    background-color: rgb(var(--emerald1));
     display: grid;
     overflow: scroll;
     overflow-x: hidden;
@@ -67,6 +140,7 @@ main {
     gap: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-area: 2/2/3/3;
+    font-family: 'Raleway', sans-serif;
 }
 
 .projects::-webkit-scrollbar {
@@ -80,12 +154,13 @@ main {
 
 .projects::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: #ee92226a;
+    -webkit-box-shadow: inset 0 0 6px #EE9322;
 }
 
 .projects::-webkit-scrollbar-thumb:hover {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px #0ea5e9;
+    -webkit-box-shadow: inset 0 0 6px black;
 }
 
 .card {
@@ -98,13 +173,11 @@ main {
     transition: all .5s ease;
     margin: 1rem 0 0 1rem;
     padding: 1rem;
-    box-shadow: inset 0 0 5px red;
-    box-shadow: inset 0 0 5px red;
+    background-color: #219C90;
 }
 
-.card:hover{
-    box-shadow: inset 0 0 5px white;
-    border: 1px solid white;
+.card:hover {
+    transform: translate(8px);
 }
 
 .card>.images {
@@ -117,6 +190,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #E9B824;
 }
 
 .card>p {
@@ -124,6 +198,7 @@ main {
     overflow-y: scroll;
     font-size: 1.7rem;
     padding-top: 5px;
+    color: white;
 }
 
 .card>.nav {
@@ -132,13 +207,15 @@ main {
     justify-content: space-between;
     padding: 3px 1rem 0;
     font-size: 1.5rem;
-    
+
 }
 
-.nav>a{
+.nav>a {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #071952;
+    text-shadow: 0 0 1px #071952, 0 0 2px #071952;
 }
 
 .card>p::-webkit-scrollbar {
@@ -152,7 +229,7 @@ main {
 
 .card>p::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color:  rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card>p::-webkit-scrollbar-thumb:hover {
@@ -164,82 +241,118 @@ main {
     display: flex;
     align-items: end;
     font-size: 2rem;
-    padding-bottom: 1rem;
-    color: white;
-    background-color: rgb(var(--emerald1));
+    padding: 1rem 0 0;
     grid-area: 1/2/2/3;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding-left: 1rem;
 }
 
 .announcements {
     display: flex;
     align-items: end;
     font-size: 2rem;
-    padding-bottom: 1rem;
-    color: white;
-    background-color: rgb(var(--emerald1));
+    padding: 1rem 0 0;
     grid-area: 1/1/2/2;
-
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .others {
-    background-color: rgb(var(--emerald1));
     grid-area: 2/1/3/2;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-}
-
-.aCard {
-    border: 2px solid white;
-    width: 80%;
-    height: 100%;
-    margin: auto;
-}
-
-.trend {
     overflow: hidden;
 }
 
-.tCard {
-    border: 2px solid white;
-    width: 80%;
-    height: 80%;
-    margin: auto;
+.aC {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 20fr 3fr;
+    font-family: 'Raleway', sans-serif;
+}
+
+.bu {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.one {
+    border-bottom: 1px solid gray;
+    font-size: 1.3rem;
+    margin: 10px 10px 0;
+}
+
+.one>p {
+    max-height: 45px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 2fr 20fr .5fr;
+    row-gap: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .tP {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 8px;
+    grid-area: 1/1/2/4;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.tCard {
+    grid-area: 2/2/3/3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 10px;
+}
+
+.users {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 5px;
+}
+
+.users>img {
+    width: 15%;
+    background-color: orange;
+    border-radius: 25px;
 }
 
 /*for img */
 
-.scissors{
+.scissors {
     background-image: url(images/rps.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.ecs{
+.ecs {
     background-image: url(images/ecs.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.calc{
+.calc {
     background-image: url(images/calc.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.signup{
+.signup {
     background-image: url(images/Ekran\ görüntüsü\ 2023-10-07\ 190206.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
